@@ -18,7 +18,7 @@ var url = function(name) {
 T.p = url;
 
 //请求前缀
-var baseURL = "http://localhost:8080/";
+var baseURL = "http://127.0.0.1/";
 
 //登录token
 var token = localStorage.getItem("token");

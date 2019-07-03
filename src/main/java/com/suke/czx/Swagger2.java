@@ -25,11 +25,12 @@ public class Swagger2 {
     public Docket createRestApi() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())//调用apiInfo方法,创建一个ApiInfo实例,里面是展示在文档页面信息内容
+                .host("127.0.0.1")
                 .select()
                 //控制暴露出去的路径下的实例
                 //如果某个接口不想暴露,可以使用以下注解
                 //这样,该接口就不会暴露在 swagger2 的页面下
-                .apis(RequestHandlerSelectors.basePackage("com.suke.czx.modules.app"))
+                .apis(RequestHandlerSelectors.basePackage("com.suke.czx.modules.girls"))
                 .paths(PathSelectors.any())
                 .build();
     }
@@ -37,14 +38,15 @@ public class Swagger2 {
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 //页面标题
-                .title("X-SpringBoot API")
+                .title("API")
                 //创建人
-                .contact("czx")
+                .contact("qixianchuan")
                 //版本号
                 .version("1.0")
                 //描述
                 .description("API 描述")
-//                .termsOfServiceUrl("http://localhost:8080/")
+                .termsOfServiceUrl("http://localhost/")
+                .licenseUrl("http://localhost/")
                 .build();
     }
 

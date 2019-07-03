@@ -147,8 +147,8 @@ public class SysOssController extends AbstractController {
 		if (file.isEmpty()) {
 			throw new RRException("上传文件不能为空");
 		}
-
-		String tempPath = tempDir+"/"+UUID.randomUUID()+".apk";
+		//问题，如果在e盘没有temp文件夹，会报错，这里需要探测，如果没有temp，要创建文件夹
+		String tempPath = tempDir+"\\"+UUID.randomUUID()+".apk";
 		File tempFile = new File(tempPath);
 		if(tempFile.exists()){
 			tempFile.mkdirs();
