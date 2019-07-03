@@ -44,6 +44,7 @@ public class Swagger2 {
                 .version("1.0")
                 //描述
                 .description("API 描述")
+//                .termsOfServiceUrl("http://localhost:8080/")
                 .build();
     }
 

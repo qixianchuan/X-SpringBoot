@@ -36,10 +36,7 @@
       if (url && url.length > 1) {
         url = decodeURIComponent(url[1]);
       } else {
-        //url = "http://petstore.swagger.io/v2/swagger.json";
-          // url = "../index.yaml";
           url = window.location.protocol+ "//" + window.location.host+"/v2/api-docs";
-//        url = window.location.protocol+ "//localhost:8080/v2/api-docs";
       }
 
       hljs.configure({
